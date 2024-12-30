@@ -1,0 +1,40 @@
+/* Basic styling for alert messages */
+.alert {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 15px;
+    width: 80%;
+    max-width: 400px;
+    font-size: 16px;
+    color: white;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    text-align: center;
+    opacity: 0;
+    animation: fadeIn 0.5s forwards;
+}
+
+/* Green background for success messages */
+.alert.success {
+    background-color: #4CAF50; /* Green */
+}
+
+/* Red background for error messages */
+.alert.error {
+    background-color: #f10e21; /* Red */
+}
+
+/* Animation for alert appearance */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        top: 10px;
+    }
+    100% {
+        opacity: 1;
+        top: 20px;
+    }
+}

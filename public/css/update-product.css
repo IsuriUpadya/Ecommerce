@@ -1,0 +1,138 @@
+/* Resetting some basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and general styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f6f9;  /* Light background for the page */
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ensures the form is vertically centered in the viewport */
+}
+
+/* Navbar Styling */
+.navbar {
+    background-color: #051884; /* Blue background for the navbar */
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+}
+
+.navbar-brand {
+    color: white;
+    font-size: 1.8em;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.navbar-menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar-menu li {
+    display: inline;
+}
+
+.navbar-menu li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.navbar-menu li a:hover {
+    color: #ffdf00;  /* Gold hover effect */
+}
+
+/* Main Content Styling */
+.dashboard-container {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    max-width: 600px; /* More appropriate for forms */
+    margin: auto; /* Aligns automatically in the center horizontally */
+    text-align: left; /* Aligns text to the left for form labels and inputs */
+}
+
+h2 {
+    font-size: 2.5em;
+    color: #051884; /* Echoes the navbar color */
+    text-align: center; /* Centers the title */
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+    font-size: 1.1em; /* Slightly larger for readability */
+}
+
+input[type="text"],
+input[type="number"],
+input[type="file"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px; /* Rounded corners for inputs */
+    transition: border-color 0.2s ease-in-out; /* Smooth transition for focus */
+}
+
+input[type="file"] {
+    cursor: pointer; /* Indicates that the element is clickable */
+}
+
+button.btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em; /* Larger font size for button */
+    transition: background-color 0.3s ease; /* Smooth transition for hover */
+}
+
+button.btn:hover {
+    background-color: #0056b3;
+}
+
+input:focus {
+    border-color: #007bff; /* Blue border on focus */
+}
+
+@media screen and (max-width: 768px) {
+    .dashboard-container {
+        width: 95%; /* Adjusts width on smaller screens */
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+}
